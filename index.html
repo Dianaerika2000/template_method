@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservas</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container my-5">
+        <h2 class="text-center mb-4">Nuestros Hoteles</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="./img/hotel_city.jpg"
+                class="card-img-top"
+                alt="Hotel 1"
+                style="height: 300px; object-fit: cover;"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hotel City</h5>
+                <p class="card-text">
+                  <i class="bi bi-geo-alt-fill"></i> EE.UU.
+                </p>
+                <p class="card-text">
+                  Ubicado en el corazón de la ciudad, este hotel ofrece
+                  comodidad y acceso a las principales atracciones.
+                </p>
+                <p class="card-text">Tarifa por noche: $120</p>
+                <button class="btn btn-primary" id="reservarHotelCity">
+                  Reservar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="/img/hotel_beach.jpg"
+                class="card-img-top"
+                alt="Hotel 2"
+                style="height: 300px; object-fit: cover;"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hotel Beach</h5>
+                <p class="card-text">
+                  <i class="bi bi-geo-alt-fill"></i> España
+                </p>
+                <p class="card-text">
+                  Disfruta de vistas panorámicas al mar en este acogedor hotel
+                  frente a la playa.
+                </p>
+                <p class="card-text">Tarifa por noche: $180</p>
+                <button class="btn btn-primary" id="reservarHotelBeach">
+                  Reservar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="./img/hotel_mountain.jpg"
+                class="card-img-top"
+                alt="Hotel 3"
+                style="height: 300px; object-fit: cover;"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hotel Mountain</h5>
+                <p class="card-text">
+                  <i class="bi bi-geo-alt-fill"></i> Bolivia
+                </p>
+                <p class="card-text">
+                  Experimenta la tranquilidad y la belleza natural en este hotel
+                  de montaña.
+                </p>
+                <p class="card-text">Tarifa por noche: $80</p>
+                <button class="btn btn-primary" id="reservarHotelMountain">
+                  Reservar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario de reserva -->
+        <div id="formularioReserva" class="d-none">
+          <h2 class="text-center mb-4">Sistema de Reservas</h2>
+          <div class="row justify-content-around">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="numNights">Número de noches:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="numNights"
+                  min="1"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="location">Ubicación:</label>
+                <select class="form-control" id="location" required>
+                  <option value="">Seleccione una ubicación</option>
+                  <option value="us">Estados Unidos</option>
+                  <option value="es">España</option>
+                  <option value="bo">Bolivia</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="roomRate">Tarifa por noche:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="roomRate"
+                  min="1"
+                  readonly
+                />
+              </div>
+              <button class="btn btn-primary my-3" id="reservationButton">
+                Reservar
+              </button>
+            </div>
+            <div class="col-4">
+              <div id="reservationResult" class="mt-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
